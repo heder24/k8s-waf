@@ -3,6 +3,7 @@ module "waf" {
   version = "1.0.0"
   # insert required variables here
   name = var.waf_name
+  default_action ="allow"
 
   visibility_config = {
     cloudwatch_metrics_enabled = true

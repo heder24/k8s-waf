@@ -2,6 +2,7 @@ module "waf" {
   source  = "app.terraform.io/heder24/waf/aws"
   version = "1.0.0"
   # insert required variables here
+  name = var.waf_name
 
   visibility_config = {
     cloudwatch_metrics_enabled = true

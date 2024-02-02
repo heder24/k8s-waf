@@ -445,7 +445,7 @@ data "aws_iam_policy_document" "knote-waf-policy" {
       type        = "Service"
     }
     actions   = ["logs:CreateLogStream", "logs:PutLogEvents"]
-    resources = ["${aws_cloudwatch_log_group.example.arn}:*"]
+    resources = ["${ws_cloudwatch_log_group.waf_log_group.arn}:*"]
     condition {
       test     = "ArnLike"
       values   = ["arn:aws:logs:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:*"]
